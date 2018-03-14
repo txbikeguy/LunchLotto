@@ -1,0 +1,32 @@
+{
+  "name": "lunchlotto",
+  "version": "1.0.0",
+  "description": "An app that takes input from all members of a small group to randomly decide where the group should eat/drink/meet.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txbikeguy/LunchLotto.git"
+  },
+  "keywords": [
+    "lunch",
+    "lottery",
+    "group",
+    "project",
+    "decisions"
+  ],
+  "author": "The Blue Barracudas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/txbikeguy/LunchLotto/issues"
+  },
+  "homepage": "https://github.com/txbikeguy/LunchLotto#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.36.1"
+  }
+}
