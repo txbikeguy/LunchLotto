@@ -52,19 +52,24 @@
       <!-- Form: Create new group -->
       <div id="new-group-form" class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <!-- Leader username -->
-          <p class="cool-font">Group leader</p>
-          <input class="form-control" type="text" id="username" placeholder="Enter Your User Name">
+          <!-- Group Name -->
+          <p class="cool-font">Group Name</p>
+          <input class="form-control" type="text" id="group-name" placeholder="Enter Your Group's Name">
+          <!-- Leader Username -->
+          <p class="cool-font">Your Name</p>
+          <input class="form-control" type="text" id="user-name" placeholder="Enter Yours Name">
           <!-- Set a zip code  --> 
           <p class="cool-font">Zip Code</p>
-          <input class="form-control" type="text" id="username" placeholder="i.e 55414">
+          <input class="form-control" type="text" id="zip" placeholder="i.e 55414">
           <!-- Set a zip code range --> 
-          <p class="cool-font">Zip Radius</p>
-          <input class="form-control" type="text" id="username" placeholder="i.e 20 miles">
+          <p class="cool-font">Search Radius</p>
+          <input class="form-control" type="text" id="radius" placeholder="i.e 20 miles">
           <br>
-          <p class="cool-font">Restaurant</p>
-          <input class="form-control" type="text" id="newRestaurant" placeholder="Your Suggestion">
-          <button id="restSubmit" class="btn btn-lg pull-right">Submit!</button>
+
+          <!-- Commenting out until later. Maybe a restaurant suggestion would be better on the next page. -->
+          <!-- <p class="cool-font">Restaurant</p> -->
+          <!-- <input class="form-control" type="text" id="newRestaurant" placeholder="Your Suggestion" -->
+          <button id="restSubmit" class="btn btn-lg pull-right">Next!</button>
         
         </div>
       </div>
@@ -72,12 +77,17 @@
       <!-- Form: Add to existing group -->
       <div id="existing-group-form" class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <p class="cool-font">Username</p>
-          <input class="form-control" type="text" id="username" placeholder="Enter Your User Name">
+          <p class="cool-font">Group Name</p>
+          <input class="form-control" type="text" id="group-search" placeholder="Enter The Group's Name">
           <br>
-          <p class="cool-font">Restaurant</p>
-          <input class="form-control" type="text" id="newRestaurant" placeholder="Enter a Restaurant Suggestion">
-          <button id="restSubmit" class="btn btn-lg pull-right">Submit!</button>
+          <p class="cool-font">Username</p>
+          <input class="form-control" type="text" id="username-add" placeholder="Enter Your Name">
+          <br>
+
+          <!-- Commenting out until later. Maybe a restaurant suggestion would be better on the next page. -->
+          <!-- <p class="cool-font">Restaurant</p> -->
+          <!-- <input class="form-control" type="text" id="newRestaurant" placeholder="Enter a Restaurant Suggestion"> -->
+          <button id="restSubmit" class="btn btn-lg pull-right">Next!</button>
         </div>
       </div>
  
