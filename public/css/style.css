@@ -8,19 +8,27 @@ body{
     height: 5000px;
 }
 
-
-
 #hero-div {
-    background-image: url("images/2.jpg");
-    background-position: center; 
-    background-size: cover;
-    position: relative;
-    height: 50vh;
-    width: auto;
     font-family: verdana;
     color: white;
-    background-color: #1da1f2;
+    background-image: url("images/2.jpg");
+    
+    background-size: cover;
+    position: relative;
+    /* height: 50vh;
+    width: auto;
+    */
+    background-position: center; 
+    max-width: 100vw;
+    min-height: 100vh;
+    margin-right: 0px;
+    display: block;
+    margin: auto;
+
+
+
   }
+
 #hero-text {
     text-align: center;
     position: absolute;
@@ -55,4 +63,12 @@ p {
 
 input {
   margin: 20px;
+}
+
+#new-group-form {
+    display: none;
+}
+
+#existing-group-form{
+    display: none;
 }
