@@ -15,13 +15,23 @@ $("#make-group-btn").click(function() {
     $("#new-group-form").slideToggle();
     $("#existing-group-form").slideUp(0);
 
-})
+});
 
 // on add to a group button, scrolldown form
 $("#existing-group-btn").click(function() {
     $("#existing-group-form").slideToggle();
     $("#new-group-form").slideUp(0);
-})
+});
+
+// Create Group Button
+$("#create-group").click(function() {
+
+});
+
+// Search for Group Button
+$("#group-search").click(function() {
+
+});
 
 
 });
