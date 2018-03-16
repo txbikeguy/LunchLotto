@@ -5,12 +5,14 @@ body{
     background-position: center;
     background-size: cover;
     position: relative; 
- 
+    height: 5000px;
 }
 
-#content{
+
+
+/* #content{
     display: none;
-}
+} */
 
 #hero-div {
     background-image: url("images/6.jpg");

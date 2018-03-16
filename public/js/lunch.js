@@ -1,9 +1,11 @@
+$(document).ready(function(){
+    // On page refresh, scroll to top
+    $('html, body').animate({scrollTop: 0}, 'fast');
+
 
 $("#hero-btn").click(function(){
-    $("#content").slideDown("slow");
-})
+    // On enter button click, scroll to top of form
+    $('html, body').animate({scrollTop: $('#content').offset().top}, 'slow');
+});
 
-// Requires jquery plugin - http://flesler.blogspot.com/2009/05/jqueryscrollto-142-released.html
-// $("#hero-btn").click(function(){
-//     $("#hero-div").scrollTo("#content");
-// })
+});
