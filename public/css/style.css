@@ -12,21 +12,14 @@ body{
     font-family: verdana;
     color: white;
     background-image: url("images/2.jpg");
-    
     background-size: cover;
     position: relative;
-    /* height: 50vh;
-    width: auto;
-    */
     background-position: center; 
     max-width: 100vw;
     min-height: 100vh;
     margin-right: 0px;
     display: block;
     margin: auto;
-
-
-
   }
 
 #hero-text {
@@ -36,14 +29,6 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-}
-
-/* #hero-btn{} */
-
-.cool-font {
-    font-family: verdana;
-    font-size: 24px;
-    color: #1da1f2;
 }
 
 .btn {
@@ -56,9 +41,14 @@ body{
     border-width: 2px;
   }
 
+
+
 p {
     margin: 0;
     font-size: 16px;
+    font-family: 'Ovo', serif;
+    font-size: 24px;
+    color: #ffffff;
 }
 
 input {
@@ -67,12 +57,25 @@ input {
 
 #new-group-form {
     display: none;
+    background-color: rgba(19, 18, 18, 0.537);
+    margin-top: 100px;
 }
 
 #existing-group-form{
     display: none;
+    background-color: rgba(19, 18, 18, 0.537);
+    margin-top: 100px;
 }
 
-html {
-    overflow: hidden;
+#restaurant-form{
+    display: none;
+    background-color: rgba(19, 18, 18, 0.537);
+    margin-top: 100px;
+}
+
+#display-group{
+    background-color: blue;
+}
+#new-restaurant{
+    background-color: green;
 }
