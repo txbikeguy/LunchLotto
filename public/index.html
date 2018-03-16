@@ -19,6 +19,9 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <!-- Favicon Image -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
 
 
   </head>
@@ -35,7 +38,7 @@
         <div id="hero-text">
         <h1>Lunch Lotto</h1>
         <p>Pick a place to eat with friends</p>
-        <button id="hero-btn" type="button" class="btn btn-primary btn-lg">Enter Website</button>
+        <button id="hero-btn" type="button" class="btn btn-primary btn-lg">Get Started!</button>
         </div>
 </div>
 
@@ -44,7 +47,7 @@
         <div class="row">
             <div class="col-sm-8 col-sm-offset-4">
                 <button id="make-group-btn" type="button" class="btn btn-primary btn-lg">Create Group</button>
-                <button id="existing-group-btn" type="button" class="btn btn-primary btn-lg">Add to a Group</button>
+                <button id="existing-group-btn" type="button" class="btn btn-primary btn-lg">Find a Group</button>
             </div>
         </div>
 
@@ -52,19 +55,24 @@
       <!-- Form: Create new group -->
       <div id="new-group-form" class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <!-- Leader username -->
-          <p class="cool-font">Group leader</p>
-          <input class="form-control" type="text" id="username" placeholder="Enter Your User Name">
+          <!-- Group Name -->
+          <p class="cool-font">Group Name</p>
+          <input class="form-control" type="text" id="group-name" placeholder="Name Your Group">
+          <!-- Leader Username -->
+          <p class="cool-font">Your Name</p>
+          <input class="form-control" type="text" id="user-name" placeholder="Enter Your Name">
           <!-- Set a zip code  --> 
           <p class="cool-font">Zip Code</p>
-          <input class="form-control" type="text" id="username" placeholder="i.e 55414">
+          <input class="form-control" type="text" id="zip" placeholder="i.e 55414">
           <!-- Set a zip code range --> 
-          <p class="cool-font">Zip Radius</p>
-          <input class="form-control" type="text" id="username" placeholder="i.e 20 miles">
+          <p class="cool-font">Search Radius</p>
+          <input class="form-control" type="text" id="radius" placeholder="i.e 20 miles">
           <br>
-          <p class="cool-font">Restaurant</p>
-          <input class="form-control" type="text" id="newRestaurant" placeholder="Your Suggestion">
-          <button id="restSubmit" class="btn btn-lg pull-right">Submit!</button>
+
+          <!-- Commenting out until later. Maybe a restaurant suggestion would be better on the next page. -->
+          <!-- <p class="cool-font">Restaurant</p> -->
+          <!-- <input class="form-control" type="text" id="newRestaurant" placeholder="Your Suggestion" -->
+          <button id="restSubmit" class="btn btn-lg pull-right">Next!</button>
         
         </div>
       </div>
@@ -72,12 +80,17 @@
       <!-- Form: Add to existing group -->
       <div id="existing-group-form" class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <p class="cool-font">Username</p>
-          <input class="form-control" type="text" id="username" placeholder="Enter Your User Name">
+          <p class="cool-font">Group Name</p>
+          <input class="form-control" type="text" id="group-search" placeholder="Enter The Group's Name">
           <br>
-          <p class="cool-font">Restaurant</p>
-          <input class="form-control" type="text" id="newRestaurant" placeholder="Enter a Restaurant Suggestion">
-          <button id="restSubmit" class="btn btn-lg pull-right">Submit!</button>
+          <p class="cool-font">Username</p>
+          <input class="form-control" type="text" id="username-add" placeholder="Enter Your Name">
+          <br>
+
+          <!-- Commenting out until later. Maybe a restaurant suggestion would be better on the next page. -->
+          <!-- <p class="cool-font">Restaurant</p> -->
+          <!-- <input class="form-control" type="text" id="newRestaurant" placeholder="Enter a Restaurant Suggestion"> -->
+          <button id="restSubmit" class="btn btn-lg pull-right">Next!</button>
         </div>
       </div>
  

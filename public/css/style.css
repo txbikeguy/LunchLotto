@@ -72,3 +72,7 @@ input {
 #existing-group-form{
     display: none;
 }
+
+html {
+    overflow: hidden;
+}
