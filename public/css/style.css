@@ -67,8 +67,11 @@ input {
 
 #new-group-form {
     display: none;
+    background-color: rgba(19, 18, 18, 0.537);
 }
 
 #existing-group-form{
     display: none;
+    background-color: rgba(19, 18, 18, 0.537);
 }
+
