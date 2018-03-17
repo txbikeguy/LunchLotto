@@ -14,13 +14,13 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Enables local CSS page (Note: CSS will have to be stored in the public folder)
+// Enables local CSS page 
 app.use(express.static(__dirname + '/public'));
 
-// Routing **NOTE**: Currently no routing exists- update this note when we have routes
+// Routing **NOTE**: html routing is done, but no api routing currently exists- to be added later
 app.use(express.static("app"));
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
+ require("./routing/htmlRoutes")(app);
 
 // Listening on port function
 app.listen(PORT, function() {
