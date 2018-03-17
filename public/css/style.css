@@ -97,13 +97,13 @@ margin : 0 auto;
 #make-group-btn{
     margin-top: 100px;
     margin-right: 25px;
-    width: 11vw;
+    /* width: 11vw; */
 }
 
 #existing-group-btn{
     margin-top: 100px;
     margin-left: 25px;
-    width: 11vw;
+    /* width: 11vw; */
 }
 
 .footer{
