@@ -1,0 +1,1 @@
+    INSERT INTO lunch (group_name, user_name, restaurant_name) VALUES ('Blue Baracudas', 'Alycia', 'Chipotle');
