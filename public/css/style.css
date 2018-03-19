@@ -148,6 +148,6 @@ margin : 0 auto;
       transform: translateY(-15px);
     }
     60% {
-      transform: translateY(-15px);
+      transform: translateY(-9px);
     }
   }
