@@ -1,27 +1,28 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+// Dependencies
+// =============================================================
 
-var burger = {
-  all: function(cb) {
-    orm.all("burgers", function(res) {
-      cb(res);
-    });
+// This may be confusing but here Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+var sequelize = require("../config/connection.js");
+
+// Creates a "Lunch" model that matches up with DB
+var Lunch = sequelize.define("Lunch", {
+  user_name: {
+    type: Sequelize.STRING
   },
-  create: function(cols, vals, cb) {
-    orm.create("burgers", cols, vals, function(res) {
-      cb(res);
-    });
+  group_name: {
+    type: Sequelize.STRING
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
-      cb(res);
-    });
-  },
-  delete: function(condition, cb) {
-    orm.delete("burgers", condition, function(res) {
-      cb(res);
-    });
+  restaurant_name: {
+    type: Sequelize.STRING
   }
-};
+}, {
+  timestamps: false
+});
 
-module.exports = burger;
+// Syncs with DB
+Lunch.sync();
+
+// Makes the Lunch Model available for other files (will also create a table)
+module.exports = Lunch;
