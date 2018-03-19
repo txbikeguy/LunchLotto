@@ -6,13 +6,15 @@ var connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
   } else {
-  connection = mysql.createConnection({
-    port: 3306,
-    host: "localhost",
-    user: "root",
-    password: "mySQL",
-    database: ""
-  });
+    connection = new Sequelize("lunch_db", "root", "mySQL", {
+      host: "localhost",
+      dialect: "mysql",
+      pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
+      }
+    });
 };
 
 // Make connection.
