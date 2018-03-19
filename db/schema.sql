@@ -4,10 +4,8 @@ USE lunch_db;
 
 CREATE TABLE lunch
 (
-    id int NOT NULL AUTO_INCREMENT,
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY
     user_name varchar (50) NOT NULL,
     group_name varchar (50) NOT NULL,
-    restaurant_name varchar (50) NOT NULL,
-    PRIMARY KEY (id)
-
+    restaurant_name varchar (50) NOT NULL
 );  
