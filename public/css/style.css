@@ -30,7 +30,7 @@ body{
 #hero-text h1 {
     text-align: left; 
     position: absolute;
-    top: 51%;
+    top: 52%;
     left: 41%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
@@ -38,15 +38,17 @@ body{
     border-top: 1px solid #BB7B43;
 }
 
-/* #hero-btn {
+
+#hero-btn {
     position: absolute;
-    top: 62.5%;
-    left: 39.2%;
+    top: 67%;
+    left: 30.5%;
     transform: translate(-50%, -50%);
     color: #BB7B43;
-    text-decoration: none;
-    /* border-top: 1px solid #BB7B43; */
-  } */
+    text-decoration: none;  
+    outline: none;
+   } 
+
 
 p {
     text-decoration: none;
