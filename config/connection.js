@@ -1,5 +1,6 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
+var Sequelize = require("sequelize");
 
 var connection;
 
