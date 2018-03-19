@@ -1,3 +1,9 @@
+/* Colors
+===================
+Gray: #99908C; 
+Exorcist Green: #787825;
+Burger Bun orange: ##BB7B43; */
+
 body{
     background-image: url("images/1.jpg");
     background-repeat: no-repeat;
@@ -5,11 +11,11 @@ body{
     background-position: center;
     background-size: cover;
     position: relative; 
-    height: 5000px;
+    height: 2000rem;
+    font-family: 'Lato', sans-serif;
 }
 
 #hero-div {
-    font-family: verdana;
     background-image: url("images/hero_image.png");
     background-size: cover;
     position: relative;
@@ -25,29 +31,28 @@ body{
     text-align: left; 
     position: absolute;
     top: 51%;
-    left: 42%;
+    left: 41%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
     color: #BB7B43;
     border-top: 1px solid #BB7B43;
 }
 
-.btn {
-    margin: 10px;
-    font-family: verdana;
-    color: #1da1f2;
-    background-color: white;
-    border-color: #1da1f2;
-    border-style: solid;
-    border-width: 2px;
-  }
+/* #hero-btn {
+    position: absolute;
+    top: 62.5%;
+    left: 39.2%;
+    transform: translate(-50%, -50%);
+    color: #BB7B43;
+    text-decoration: none;
+    /* border-top: 1px solid #BB7B43; */
+  } */
 
 p {
-    margin: 0;
-    font-size: 16px;
-    font-family: 'Ovo', serif;
-    font-size: 24px;
-    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center; 
+    
 }
 
 input {
