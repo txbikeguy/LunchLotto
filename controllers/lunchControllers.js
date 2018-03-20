@@ -3,7 +3,7 @@ var express = require("express");
 
 var router = express.Router();
 // grabbing our models
-var db = require("./models");
+var db = require("../models/lunch.js");
 
 // get route -> index
 router.get("/", function(req, res) {

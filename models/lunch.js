@@ -1,13 +1,9 @@
-// Dependencies
-// =============================================================
-
-// This may be confusing but here Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
+var db = require('../config/connection.js'),
+  sequelize = db.sequelize;
+  Sequelize = db.Sequelize;
 
 // Creates a "Lunch" model that matches up with DB
-var Lunch = sequelize.define("Lunch", {
+var Lunch = sequelize.define("lunch", {
   user_name: {
     type: Sequelize.STRING
   },

@@ -3,13 +3,15 @@ var mysql = require("mysql");
 var Sequelize = require("sequelize");
 
 var connection;
+var sequelize;
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
   } else {
-    connection = new Sequelize("lunch_db", "root", "mySQL", {
+    sequelize = new Sequelize("lunch_db", "root", "mySQL", {
       host: "localhost",
       dialect: "mysql",
+      port: 3000,
       pool: {
         max: 5,
         min: 0,
@@ -27,5 +29,10 @@ if (process.env.JAWSDB_URL) {
 //   console.log("connected as id " + connection.threadId);
 // });
 
-// Export connection for our ORM to use.
-module.exports = connection;
+// Export connection for our models js file to use.
+var db = {};
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+db.connection = connection;
+
+module.exports = db;
