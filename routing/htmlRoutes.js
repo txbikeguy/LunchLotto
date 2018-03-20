@@ -14,4 +14,7 @@ module.exports = function(app) {
       res.sendFile(path.join(__dirname, "../views/index.html"));
     });
 
+    app.get("/groups", function(req, res) {
+        console.log(res);
+      });
 };
