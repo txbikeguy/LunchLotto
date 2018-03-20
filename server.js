@@ -4,6 +4,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
+var db = require("./models/lunch.js");
+
 // Sets up the Express App
 var app = express();
 
@@ -19,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Routing **NOTE**: html routing is done, but no api routing currently exists- to be added later
 app.use(express.static("app"));
-// require("./app/routing/apiRoutes")(app);
+ require("./controllers/lunchControllers.js")(app);
  require("./routing/htmlRoutes")(app);
 
 // Listening on port function
