@@ -67,7 +67,7 @@
       <div class="col-xs-4 col-sm-offset-4 text-center">
         <!-- Group Name -->
         <!-- Future: Generate random group name -->
-        <p>Group Name</p>
+        <p id="group-name">Group Name</p>
         <input class="form-control" id="new-group" placeholder="Enter Your Group Name">
         <p>Your Name</p>
         <input class="form-control" id="new-user" placeholder="Enter Your Name">
@@ -79,8 +79,10 @@
         <!-- <p>Search Radius</p>
         <input class="form-control" id="radius" placeholder="i.e 20 miles">
         <br> -->
-
-        <button id="submit-new-grp" class="btn btn-lg ">Create Group</button>
+        <button id="submit-new-grp" type="button" class="btn btn-link">
+          <p>Create Group</p>
+          <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
 
@@ -92,7 +94,10 @@
         <input class="form-control" id="existing-group" placeholder="Find Your Group Name">
         <br>
         <!-- Find Group -->
-        <button id="find-group" class="btn btn-lg">Find Group </button>
+        <button id="find-group" type="button" class="btn btn-link">
+          <p>Find Group</p>
+          <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
 
