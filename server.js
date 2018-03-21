@@ -1,31 +1,42 @@
-// Dependencies
+// *****************************************************************************
+// Server.js - This file is the initial starting point for the Node/Express server.
+//
+// ******************************************************************************
+// *** Dependencies
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
-
-var db = require("./models/lunch.js");
 
 // Sets up the Express App
+// =============================================================
 var app = express();
-
-// Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 3000;
 
+// Requiring our models for syncing
+var db = require("./models");
+
 // Sets up the Express app to handle data parsing
+
+// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
 app.use(bodyParser.json());
 
+// Static directory
+app.use(express.static("public"));
+
 // Enables local CSS page 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
-// Routing **NOTE**: html routing is done, but no api routing currently exists- to be added later
-app.use(express.static("app"));
- require("./controllers/lunchControllers.js")(app);
- require("./routing/htmlRoutes")(app);
+// Routes
+// =============================================================
+require("./routing/api-routes.js")(app);
+require("./routing/html-routes.js")(app);
 
-// Listening on port function
-app.listen(PORT, function() {
-    console.log("listening on port", PORT);
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
   });
-  
+});

@@ -27,30 +27,10 @@ $(document).ready(function () {
         // Hide Restaurant form if open
         $("#group-form").slideUp(0);
 
-        // capture user input 
-        var groupSearch = $("#existing-group").val().trim();
-
-        // G
-        $.get("/api/" + groupSearch, function(data) {
-            console.log(data);
-            // display in group form later
-        
-        // function renderRestNames(data) {
-        //     for (var i = 0; i < data.length; i++) {
-        //         var div = $("<div");
-
-        //         div.append(data.group_name);
-        //         $("#groupName").append
-        //     if(data) {
-
         $("#groupName").val("");
         $("#restNames").val("");
 
-        $("#groupName").append(data.group_name);
-        $("#restNames").append(data.restaurant_name); // update!
-
         });
-    });
 
     // on submit new group, pull up restaurant form 
     $("#submit-new-grp").click(function () {
