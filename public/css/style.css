@@ -102,15 +102,28 @@ margin : 0 auto;
 }
 
 
-#make-group-btn{
-    margin-top: 100px;
-    margin-right: 25px;
+#make-group-btn { 
+    margin-top: 5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color:#e0d8cb;
+    text-decoration: none;  
+    outline: none;
+    font-size: 3rem;
+    font-variant: small-caps;
     /* width: 11vw; */
 }
 
-#existing-group-btn{
-    margin-top: 100px;
-    margin-left: 25px;
+#existing-group-btn {
+    margin-top: 5rem;
+    margin-left: 50rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #e0d8cb;  
+    text-decoration: none;  
+    outline: none;
+    font-size: 3rem;
+    font-variant: small-caps;
     /* width: 11vw; */
 }
 
