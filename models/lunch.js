@@ -1,3 +1,5 @@
+var Sequelize = require("sequelize");
+
 module.exports = function(sequelize, DataTypes) {
 
 // Creates a "Lunch" model that matches up with DB

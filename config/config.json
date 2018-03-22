@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "mySQL",
     "database": "lunch_db",
     "host": "localhost",
     "dialect": "mysql"

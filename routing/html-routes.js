@@ -15,6 +15,6 @@ module.exports = function(app) {
     });
 
     app.get("/groups", function(req, res) {
-        console.log(res);
-      });
+      res.sendFile(path.join(__dirname, "../views/index.html"));
+    });
 };

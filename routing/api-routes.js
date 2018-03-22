@@ -17,18 +17,17 @@ module.exports = function(app) {
     res.redirect("/lunch");
   });  
 
-  // GET route for getting all of the posts
-  app.get("/api/groups/", function(req, res) {
-    db.lunch.findAll({
-        include: [db.group_name],
-        // Here we specifiy we want to return our group names in Ascending order
-        order: [
-            ["group_name", "ASC"]
-        ]
-    })
-    .then(function(dbLunch) {
-      res.json(dbLunch);
-    });
+  // Get all books from a specific author
+  app.get("/api/:groups", function(req, res) {
+    if (req.params.groups) {
+      Lunch.findAll({
+        where: {
+          group_name: req.params.groups
+        }
+      }).then(function(results) {
+        res.json(results);
+      });
+    }
   });
 
   

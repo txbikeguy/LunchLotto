@@ -1,8 +1,10 @@
 $(document).ready(function () {
 
     $("#find-group").click(function () {
+        event.preventDefault();
         // capture user input 
         var groupSearch = $("#existing-group").val().trim();
+        console.log(groupSearch);
 
         // Ajax Call To Search Database For Group Name
         $.get("/api/" + groupSearch, function(data) {
