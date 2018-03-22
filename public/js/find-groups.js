@@ -1,18 +1,19 @@
-$(document).ready(function () {
-
-    $("#find-group").click(function () {
-        event.preventDefault();
-        // capture user input 
-        var groupSearch = $("#existing-group").val().trim();
-        console.log(groupSearch);
-
-        // Ajax Call To Search Database For Group Name
-        $.get("/api/" + groupSearch, function(data) {
-            console.log(data);
-            renderGroups(data);
+// When user hits the search-btn
+$("#find-group").on("click", function(event) {
+    event.preventDefault();
+  
+    // Save the book they typed into the book-search input
+    var groupSearched = $("#existing-group").val().trim();
+  
+    // Make an AJAX get request to our api, including the user's book in the url
+    $.get("/api/" + groupSearched, function(data) {
+  
+      console.log(data);
+      renderGroups(data);
+  
     });
-});
-
+  
+  });
     function renderGroups(data) {
         if (data.length !== 0) {
     
@@ -30,4 +31,3 @@ $(document).ready(function () {
             }
         }
     }
-});
