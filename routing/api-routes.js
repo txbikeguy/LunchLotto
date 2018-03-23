@@ -8,6 +8,7 @@
 // Requiring our Todo model
 var db = require("../models/lunch.js");
 var Lunch = require("../models/lunch.js")
+var sequelize = require("../config/connection.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -20,14 +21,11 @@ module.exports = function(app) {
   // Get all books from a specific author
   app.get("/api/:groups", function(req, res) {
     if (req.params.groups) {
-      Lunch.findAll({
-        where: {
-          group_name: req.params.groups
-        }
-        
+      sequelize.query("SELECT DISTINCT group_name FROM lunches AS lunch WHERE group_name='" + req.params.groups + "'", { raw: true
       }).then(function(results) {
         res.json(results);
-        console.log("group params", req.params.groups)
+        console.log(results);
+        // console.log("group params", req.params.groups)
       });
     }
   });
