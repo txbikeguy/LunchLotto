@@ -184,7 +184,8 @@ margin : 0 auto;
     }
   }
 
-  #rest-list {
-      color: white;
+  #user-list, #group-name, #rest-name {
+      color: #e0d8cb;
       font-size: 15pt;
   }
+

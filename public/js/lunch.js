@@ -43,38 +43,6 @@ $(document).ready(function () {
     });
 
     $("#find-group").click(function () {
-        var search = "/api/groups"
-        var query = $('#existing-group').val().trim();
-        if (query.length > 0)
-            search += "/" + query;
-        $.get(search).then(function (data) {
-            console.log(data);
-
-            // if a group name was entered, list all restaurants for the group
-            if (query.length > 0) {
-                // put group name into #groupName span 
-                $("#groupName").text(query);
-                // parse restaurant data into #restNames span
-                restList = [];
-                for (i = 0; i < data.length; i++) {
-                    restList.push(data[i].restaurant_name);
-
-                }
-                $("#groupLabel").text("Group: ");
-                $("#restNames").text(restList);
-                // if no group name was entered, find all groups
-            } else {
-                groupList = [];
-                for (i = 0; i < data.length; i++) {
-                    groupList.push(data[i].group_name);
-
-                }
-                $("#groupLabel").text("All Groups: ");
-                $("#groupName").text(groupList);
-                $("#rest-list").hide();
-            }
-
-        });
         // Clear form values
         $("#existing-group-form input").val("");
         // Hide Find Group form
