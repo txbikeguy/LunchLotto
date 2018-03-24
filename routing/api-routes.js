@@ -17,7 +17,7 @@ module.exports = function (app) {
     db.findAll({attributes: ['group_name'], group: ['group_name']})
       .then(function (data) {
         res.json(data);
-        console.log(data);
+        // console.log(data);
       })
   });
 
@@ -28,7 +28,7 @@ module.exports = function (app) {
     }})
       .then(function (data) {
         res.json(data);
-        console.log(data);
+        // console.log(data);
       })
   });
 

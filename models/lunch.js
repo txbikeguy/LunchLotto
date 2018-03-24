@@ -25,7 +25,7 @@ console.log("lunch model", Lunch)
 // Syncs with DB
 Lunch.sync();
 
-// Makes the Book Model available for other files (will also create a table)
+// Makes the Lunch Model available for other files (will also create a table)
 module.exports = Lunch;
 
 
