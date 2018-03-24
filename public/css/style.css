@@ -183,3 +183,8 @@ margin : 0 auto;
       transform: translateY(-9px);
     }
   }
+
+  #rest-list {
+      color: white;
+      font-size: 15pt;
+  }
