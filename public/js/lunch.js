@@ -30,7 +30,7 @@ $(document).ready(function () {
         $("#groupName").val("");
         $("#restNames").val("");
 
-        });
+    });
 
     // on submit new group, pull up restaurant form 
     $("#submit-new-grp").click(function () {
@@ -43,6 +43,38 @@ $(document).ready(function () {
     });
 
     $("#find-group").click(function () {
+        var search = "/api/groups"
+        var query = $('#existing-group').val().trim();
+        if (query.length > 0)
+            search += "/" + query;
+        $.get(search).then(function (data) {
+            console.log(data);
+
+            // if a group name was entered, list all restaurants for the group
+            if (query.length > 0) {
+                // put group name into #groupName span 
+                $("#groupName").text(query);
+                // parse restaurant data into #restNames span
+                restList = [];
+                for (i = 0; i < data.length; i++) {
+                    restList.push(data[i].restaurant_name);
+
+                }
+                $("#groupLabel").text("Group: ");
+                $("#restNames").text(restList);
+                // if no group name was entered, find all groups
+            } else {
+                groupList = [];
+                for (i = 0; i < data.length; i++) {
+                    groupList.push(data[i].group_name);
+
+                }
+                $("#groupLabel").text("All Groups: ");
+                $("#groupName").text(groupList);
+                $("#rest-list").hide();
+            }
+
+        });
         // Clear form values
         $("#existing-group-form input").val("");
         // Hide Find Group form
@@ -51,68 +83,79 @@ $(document).ready(function () {
         $("#group-form").slideToggle();
     });
 
-
-    //Declare global variables for Google Autocomplete 
-    var globalCity;
-    var globalState;
-
-
-    //Function to build the Yelp API call based on user suggestion
-    function yelpSearchSettings(restaurantName) {
-        return {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + globalCity + "," + globalState + "&term=" + restaurantName + "&limit=8",
-            "method": "GET",
-            "headers": {
-                "authorization": "Bearer UVD6_jknwmi1GkRxFFkWh7HX-JV_TrlieWHvaSMfi69lmcN6MPUUxk5EGJNnUWmLD3TV5vtrZ25whGiC9gmJRUbhEW5lz3Y6hOXT5oAS-WqK7U5TA772Lt4tBqlaWnYx",
-                "Cache-Control": "no-cache",
-            }
-        };
-    }
-
-    //Google Maps Autocomplete
-    var input = document.getElementById('location');
-    var autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['(cities)']
-    });
-
-    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-        var place = autocomplete.getPlace();
-        var city = place.address_components[0].short_name;
-        var state = place.address_components[2].short_name;
-        var lat = place.geometry.location.lat();
-        var lng = place.geometry.location.lng();
-        globalCity = city;
-        globalState = state;
-    });
-
+    // POST a new restaurant
     $("#submit-pick").click(function () {
         event.preventDefault();
-
-        // YELP SEARCH - calls Yelp API when a user enters a location and restaurant
-        function searchYelp() {
-            //Grab user input
-            var restaurantName = $("#restaurant-name").val().trim();
-            // var city = $("")
-
-            //Empty all form values
-            // $("#existing-group-form")[0].reset();
-            $("#group-form input").val("");
-
-
-            var settings = yelpSearchSettings(restaurantName);
-
-            //Initiating Ajax call
-            $.ajax(settings).done(function (response) {
-                //Returns Yelp JSON for a restaurant 
-                var responseObject = response.businesses[0];
-                //databaseFunction(responseObject);
-                console.log(responseObject);
-            });
+        var restaurant = {
+            restaurant_name: $("#restaurant-name").val().trim(),
+            group_name: $("#group-name").val().trim()
         }
-        searchYelp();
-    })
+
+        $.post('/api', restaurant)
+            .then(function (data) {
+                console.log(data);
+            });
+
+    });
+
+    // //Declare global variables for Google Autocomplete 
+    // var globalCity;
+    // var globalState;
+
+
+    // //Function to build the Yelp API call based on user suggestion
+    // function yelpSearchSettings(restaurantName) {
+    //     return {
+    //         "async": true,
+    //         "crossDomain": true,
+    //         "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + globalCity + "," + globalState + "&term=" + restaurantName + "&limit=8",
+    //         "method": "GET",
+    //         "headers": {
+    //             "authorization": "Bearer UVD6_jknwmi1GkRxFFkWh7HX-JV_TrlieWHvaSMfi69lmcN6MPUUxk5EGJNnUWmLD3TV5vtrZ25whGiC9gmJRUbhEW5lz3Y6hOXT5oAS-WqK7U5TA772Lt4tBqlaWnYx",
+    //             "Cache-Control": "no-cache",
+    //         }
+    //     };
+    // }
+
+    // //Google Maps Autocomplete
+    // var input = document.getElementById('location');
+    // var autocomplete = new google.maps.places.Autocomplete(input, {
+    //     types: ['(cities)']
+    // });
+
+    // google.maps.event.addListener(autocomplete, 'place_changed', function () {
+    //     var place = autocomplete.getPlace();
+    //     var city = place.address_components[0].short_name;
+    //     var state = place.address_components[2].short_name;
+    //     var lat = place.geometry.location.lat();
+    //     var lng = place.geometry.location.lng();
+    //     globalCity = city;
+    //     globalState = state;
+    // });
+
+
+    // YELP SEARCH - calls Yelp API when a user enters a location and restaurant
+    // function searchYelp() {
+    //     //Grab user input
+    //     var restaurantName = $("#restaurant-name").val().trim();
+    //     // var city = $("")
+
+    //     //Empty all form values
+    //     // $("#existing-group-form")[0].reset();
+    //     $("#group-form input").val("");
+
+
+    //     var settings = yelpSearchSettings(restaurantName);
+
+    //     //Initiating Ajax call
+    //     $.ajax(settings).done(function (response) {
+    //         //Returns Yelp JSON for a restaurant 
+    //         var responseObject = response.businesses[0];
+    //         //databaseFunction(responseObject);
+    //         console.log(responseObject);
+    //     });
+    // }
+    // searchYelp();
 
 
 

@@ -83,6 +83,7 @@
     </div>
     <!--==========================================================================================-->
 
+   
     <!-- Form: Find group -->
     <div id="existing-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
@@ -95,6 +96,11 @@
         <button id="find-group" type="button" class="btn btn-link">
           <p>Find Group</p>
         </button>
+        <!-- Find all groups -->
+        <!-- <button id="find-all-groups" type="button" class="btn btn-link">
+          <p>Find All Groups</p>
+          <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
+        </button> -->
       </div>
     </div>
 
@@ -106,7 +112,8 @@
         <div id="display-group">
           <!-- Display Group and its current restaurants -->
           <div id="group-name">
-          Group: <span id="groupName"> Name </span>
+          <span id="groupLabel"></span>
+          <span id="groupName"></span>
           </div>
           
           <div id="rest-list">
