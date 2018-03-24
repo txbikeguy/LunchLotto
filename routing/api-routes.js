@@ -27,15 +27,14 @@ module.exports = function(app) {
   
 
 
-app.post("/api/new", function(req, res) {
-  console.log("Group Data:");
-  console.log(req.body);
-  Lunch.create({
-    group_name: req.body.group_name,
-    user_name: req.body.user_name,
-    restaurant_name: ""
+  app.post("/api/new", function(req, res) {
+    console.log("Group Data:");
+    console.log(req.body);
+    Lunch.create({
+      group_name: req.body.group_name,
+      user_name: req.body.user_name,
+      restaurant_name: ""
+    });
   });
-});
-
 
 };
