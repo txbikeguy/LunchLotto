@@ -12,9 +12,6 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <!-- Moment.js -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
@@ -48,7 +45,7 @@
 
   <!-- User Content -->
   <div class="container">
-    <!-- User Buttons -->
+    <!-- User Buttons/header buttons -->
     <div class="row">
       <div class="col-sm-8 col-sm-offset-3">
         <button id="make-group-btn" type="button" class="btn btn-link">
@@ -63,41 +60,41 @@
     </div>
 
     <!-- Form: Create new group -->
+       <!--==========================================================================================-->
+
     <div id="new-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
-        <!-- Group Name -->
-        <!-- Future: Generate random group name -->
-        <p id="group-name">Group Name</p>
-        <input class="form-control" id="new-group" placeholder="Enter Your Group Name">
-        <p>Your Name</p>
+        <!-- Group Name Input-->
+        <p class="form-heading">Group Name</p>
+       <input class="form-control" id="new-group" placeholder="Enter Your Group Name">
+       <br>
+       <br>
+
+       <!-- User Name Name Input-->
+        <p class="form-heading">Your Name</p>
         <input class="form-control" id="new-user" placeholder="Enter Your Name">
         <br>
-        <!-- Set a zip code  -->
-        <!-- <p>Zip Code</p>
-        <input class="form-control" id="zip" placeholder="i.e 55414">
-        <!-- Set a zip code range -->
-        <!-- <p>Search Radius</p>
-        <input class="form-control" id="radius" placeholder="i.e 20 miles">
-        <br> -->
+        <br>
+         <!-- Submit new Group-->
         <button id="submit-new-grp" type="button" class="btn btn-link">
-          <p>Create Group</p>
-          <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
+          Create Group
         </button>
       </div>
     </div>
+    <!--==========================================================================================-->
 
    
     <!-- Form: Find group -->
     <div id="existing-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
         <!-- Group Name -->
-        <p>Group Name</p>
+        <p class="form-heading">Group Name</p>
         <input class="form-control" id="existing-group" placeholder="Find Your Group Name">
+        <br>
         <br>
         <!-- Find Group -->
         <button id="find-group" type="button" class="btn btn-link">
           <p>Find Group</p>
-          <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
         </button>
         <!-- Find all groups -->
         <!-- <button id="find-all-groups" type="button" class="btn btn-link">
@@ -162,6 +159,7 @@
 
 <script type="text/javascript" src="/js/lunch.js"></script>
 <script type="text/javascript" src="/js/find-groups.js"></script>   
+<script type="text/javascript" src="/js/create-group.js"></script>
 </body>
 
 </html>
