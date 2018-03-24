@@ -12,14 +12,15 @@ $(document).ready(function () {
                     // put group name into #groupName span 
                     $("#groupName").html("<p>" + query + "</p>");
                     // parse restaurant data into #restNames span
-                    var restList = [];
+                    var userList = [];
                     for (i = 0; i < data.length; i++) {
-                        restList.push(data[i].user_name);
+                        userList.push(data[i].user_name);
 
                     }
-                    var splitRest = restList.join(", ");
+                    var splitUser = userList.join(", ");
+                    $("#userNames").text("");
                     $("#groupLabel").text("Group: ");
-                    $("#userNames").text(splitRest);
+                    $("#userNames").text(splitUser);
                     $("#user-list").show();
                     // if no group name was entered, find all groups
                 } else {
