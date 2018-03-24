@@ -20,14 +20,15 @@ $("#find-group").on("click", function(event) {
         $("#display-group").empty();
         $("#display-group").show();
     
-        for (var i = 0; i < data.length; i++) {
     
             var div = $("<div>");
     
-            div.append("<h2>" + data[i].group_name + "</h2>");
+            div.append("<h2>" + data.group_name + "</h2>");
+            console.log("data", data);
+            console.log("data i", data.group_name)
     
             $("#display-group").append(div);
     
             }
         }
-    }
+
