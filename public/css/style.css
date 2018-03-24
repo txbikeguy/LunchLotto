@@ -15,6 +15,9 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+
+/* Splash Page */
+/* ================================ */
 #hero-div {
     background-image: url("images/hero_image.png");
     background-size: cover;
@@ -58,12 +61,13 @@ p {
     
 }
 
+
 input {
 display: block;
 margin : 0 auto;
 }
 
-#new-group-form {
+#new-group-form, #existing-group-form  {
     display: none;
     background-color: rgba(19, 18, 18, 0.537);
     margin-top: 10rem;
@@ -71,30 +75,25 @@ margin : 0 auto;
     line-height: 1;
 }
 
-#group-name{
+.form-heading {
     color:#e0d8cb;
     font-size: 3rem;
     font-variant: small-caps;
 }
 
-#existing-group-form {
-    display: none;
-    background-color: rgba(19, 18, 18, 0.537);
-    margin-top: 100px;
-    line-height: 2;
-}
+
 
 #submit-new-grp, #find-group {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 18rem;
-    left: 17rem;
     color: #BB7B43;
     text-decoration: none;  
     outline: none;
     font-size: 2.1rem;
     font-variant: small-caps;
 }
+
+
 
 #group-form{
     display: none;
