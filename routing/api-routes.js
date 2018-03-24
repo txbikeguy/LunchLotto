@@ -23,7 +23,7 @@ module.exports = function (app) {
 
   // GET all restaurants of a group
   app.get("/api/groups/:group", function (req, res) {
-    db.findAll({attributes: ['group_name', 'restaurant_name'], where: {
+    db.findAll({attributes: ['group_name', 'user_name'], where: {
       group_name: req.params.group 
     }})
       .then(function (data) {
