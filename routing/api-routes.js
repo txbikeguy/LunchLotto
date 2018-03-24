@@ -41,7 +41,8 @@ module.exports = function (app) {
       }
     )
     db.sync();
-  })
+  });
+};
 // module.exports = function(app) {
 
 
@@ -68,4 +69,3 @@ module.exports = function (app) {
 //     });
 //   });
 
-// };
