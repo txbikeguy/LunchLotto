@@ -44,7 +44,7 @@ body{
 
 #hero-btn {
     position: absolute;
-    top: 67%;
+    top: 70%;
     left: 30.5%;
     transform: translate(-50%, -50%);
     color: #BB7B43;
@@ -56,7 +56,7 @@ body{
 
 p {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center; 
     
 }
@@ -75,7 +75,7 @@ margin : 0 auto;
     line-height: 1;
 }
 
-.form-heading {
+.form-heading, .rest-heading {
     color:#e0d8cb;
     font-size: 3rem;
     font-variant: small-caps;
@@ -83,7 +83,7 @@ margin : 0 auto;
 
 
 
-#submit-new-grp, #find-group {
+#submit-new-grp, #find-group, #submit-pick {
     position: absolute;
     transform: translate(-50%, -50%);
     color: #BB7B43;
@@ -103,17 +103,17 @@ margin : 0 auto;
     line-height: 2;
 }
 
-#display-group{
-    background-color: rgba(105, 28, 28, 0.34);
-    border: 3px solid black;
-    padding: 20px;
-}
-#new-restaurant{
+    /* #display-group{
+        background-color: rgba(105, 28, 28, 0.34);
+        border: 3px solid black;
+        padding: 20px;
+    } */
+/* #new-restaurant{
     background-color: rgba(105, 28, 28, 0.34);
     border: 3px solid black;
     padding: 20px;
     
-}
+} */
 
 ::placeholder { 
     font-style: italic;
