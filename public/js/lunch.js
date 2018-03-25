@@ -40,6 +40,7 @@ $(document).ready(function () {
         $("#new-group-form").slideUp(0);
         // Toggle Restaurant form
         $("#group-form").slideToggle();
+        $("#mapContainer").show();
     });
 
     $("#find-group").click(function () {
