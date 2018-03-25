@@ -18,9 +18,11 @@
   <!-- Favicon Image -->
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
-  <!-- Google API -->
-  <!-- New Key = AIzaSyA8N8DZT6rds8dMmPb_kGRV9Y_y93-6q0Y -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8N8DZT6rds8dMmPb_kGRV9Y_y93-6q0Y&libraries=places&language=en"></script>
+  <!-- Google API --> 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&callback=initMap&libraries=places">
+  </script> 
+
+  <!-- jQueryUI -->
   <link rel="stylesheet" type="text/css" media="all" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"
   />
 
@@ -155,6 +157,16 @@
             <div id="allGroupsHead">All Groups</div>
             <div id="allGroupsList"></div>
           </div>
+    </div>
+
+    <!-- Map -->
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-7 center-align">
+          <div  id="mapContainer" class="">
+            <div id="map"></div>
+          </div>
+        </div>
+    </div>
 
         </div>
       </div>
@@ -170,9 +182,11 @@
     </div>
     <!-- End Container -->
 
-    <script type="text/javascript" src="/js/find-group.js"></script>
-    <script type="text/javascript" src="/js/create-group.js"></script>
-    <script type="text/javascript" src="/js/lunch.js"></script>
+<!-- Linking all our JavaScript Files -->
+<script type="text/javascript" src="/js/find-group.js"></script>   
+<script type="text/javascript" src="/js/create-group.js"></script>
+<script type="text/javascript" src="/js/lunch.js"></script>
+<script type="text/javascript" src="/js/map.js"></script>
 </body>
 
 </html>

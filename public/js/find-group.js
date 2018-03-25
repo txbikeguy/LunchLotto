@@ -1,5 +1,4 @@
-
-    // Search for group - populates group name and its restaurants
+// Search for group - populates group name and its restaurants
     // OR searches for all groups if nothing is entered
     // new form slides down for user to select from all groups 
     $("#find-group").click(function () {
@@ -68,8 +67,8 @@
                     $("#allGroupsList").append(div);
                     $("#groupLabel").html("<i>Sorry, that group doesn't exist.</i><br>All Available Groups: <br>");
                     $("#user-list").hide();
+                    $("#mapContainer").show();
                 }
             }
-        });
-
-    };
+            })
+        };

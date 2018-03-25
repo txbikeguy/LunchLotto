@@ -1,4 +1,3 @@
-
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
@@ -14,8 +13,10 @@ var express = require('express');
 module.exports = function (app) {
   // GET all groups
   app.get("/api/groups", function (req, res) {
-    db.findAll({attributes: 
-      ['group_name'], group: ['group_name']})
+    db.findAll({
+      attributes:
+      ['group_name'], group: ['group_name']
+    })
       .then(function (data) {
         res.json(data);
         // console.log(data);
@@ -24,9 +25,11 @@ module.exports = function (app) {
 
   // GET all restaurants of a group
   app.get("/api/groups/:group", function (req, res) {
-    db.findAll({ where: {
-      group_name: req.params.group 
-    }})
+    db.findAll({
+      where: {
+        group_name: req.params.group
+      }
+    })
       .then(function (data) {
         res.json(data);
         // console.log(data);
@@ -34,56 +37,42 @@ module.exports = function (app) {
   });
 
   // POST a new restaurant
-  app.post("/api" , function(req, res){
+  app.post("/api", function (req, res) {
     db.create(
       {
         group_name: req.body.group_name,
         user_name: req.body.user_name,
         restaurant_name: req.body.restaurant_name
       }
-    ).then(function(data){
+    ).then(function (data) {
       res.json(data);
     })
   });
 
   // POST a new group
-app.post("/api/newGroup", function (req, res) {
-  console.log(req.body);
-  db.create({
-    group_name: req.body.group_name,
-    user_name: req.body.user_name
-  }).then(function (data) {
+  app.post("/api/newGroup", function (req, res) {
+    console.log(req.body);
+    db.create({
+      group_name: req.body.group_name,
+      user_name: req.body.user_name
+    }).then(function (data) {
       res.json(data);
     });
-});
+  });
+
+  // POST a new restaurant to an existing group
+  app.post("/api/groups/:id", function (req, res) {
+    console.log(req.body);
+    db.Post.create({
+      group_name: req.body.group_name,
+      user_name: req.body.user_name
+    })
+      .then(function (data) {
+        res.json(data);
+      });
+  });
 
 
 };
-
-// module.exports = function(app) {
-
-
-//   // Get the matching group from the search query
-//   app.get("/api/:groups", function(req, res) {
-//     if (req.params.groups) {
-//       sequelize.query("SELECT DISTINCT group_name FROM lunches AS lunch WHERE group_name='" + req.params.groups + "'", { raw: true
-//       }).then(function(results) {
-//         res.json(results);
-//       });
-//     }
-//   });
-
-  
-
-
-//   app.post("/api/new", function(req, res) {
-//     console.log("Group Data:");
-//     console.log(req.body);
-//     Lunch.create({
-//       group_name: req.body.group_name,
-//       user_name: req.body.user_name,
-//       restaurant_name: ""
-//     });
-//   });
 
 
