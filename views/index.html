@@ -25,7 +25,7 @@
   />
 
   <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 </head>
 
@@ -34,13 +34,13 @@
   <!-- Hero image header -->
   <div id="hero-div">
     <div id="hero-text">
-      <h1>Decisions are hard. <br>
-        Let us help.</h1>
+      <h1>Decisions are hard.
+        <br> Let us help.</h1>
       <button id="hero-btn" type="button" class="btn btn-link">
         <p>Get started</p>
         <span class="glyphicon glyphicon-chevron-down bounce" aria-hidden="true"></span>
       </button>
-    </div>  
+    </div>
   </div>
 
   <!-- User Content -->
@@ -60,22 +60,22 @@
     </div>
 
     <!-- Form: Create new group -->
-       <!--==========================================================================================-->
+    <!--==========================================================================================-->
 
     <div id="new-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
         <!-- Group Name Input-->
         <p class="form-heading">Group Name</p>
-       <input class="form-control" id="new-group" placeholder="Enter Your Group Name">
-       <br>
-       <br>
+        <input class="form-control" id="new-group" placeholder="Enter Your Group Name">
+        <br>
+        <br>
 
-       <!-- User Name Name Input-->
+        <!-- User Name Name Input-->
         <p class="form-heading">Your Name</p>
         <input class="form-control" id="new-user" placeholder="Enter Your Name">
         <br>
         <br>
-         <!-- Submit new Group-->
+        <!-- Submit new Group-->
         <button id="submit-new-grp" type="button" class="btn btn-link">
           Create Group
         </button>
@@ -83,7 +83,7 @@
     </div>
     <!--==========================================================================================-->
 
-   
+
     <!-- Form: Find group -->
     <div id="existing-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
@@ -112,55 +112,67 @@
         <div id="display-group">
           <!-- Display Group and its current restaurants -->
           <div id="group-name">
-          <span id="groupLabel"></span>
-          <span id="groupName"></span>
+            <span id="groupLabel"></span>
+            <span id="groupName"></span>
           </div>
-          
+
           <div id="user-list">
-              Members of Group: <br><span id="userNames"> (pulled from database if group exists)</span>
+            Members of Group:
+            <br>
+            <span id="userNames"> (pulled from database if group exists)</span>
           </div>
-            </div>
+
+        </div>
       </div>
 
       <div class="col-xs-4 text-center">
         <div id="new-restaurant">
           <!-- Add Restaurant to group -->
-          <!-- <p>Suggest a new restaurant:
-            <p>
-              <br> -->
-              <!-- Username -->
-              <!-- Future: Set a group leader w/ admin abilities -->
-              <!-- <p>User Name</p>
-              <input class="form-control" id="username" placeholder="Enter Your Name"> -->
-              <!-- Enter Location  -->
-              <!-- <p>Location</p>
-              <input class="form-control" id="location" placeholder="City and State"> -->
-              <!-- Add Restaurant field -->
-              <div id="rest-list">
-                <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
-              <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
-              <br>
-              <!-- On Add, post request + update the above display-group div -->
-              <button id="submit-pick" type="button" class="btn btn-link">Add</button>
+          <p>Suggest a new restaurant:<p>
+          <!-- Username -->
+          <!-- Future: Set a group leader w/ admin abilities -->
+          <p>User Name</p>
+              <input class="form-control" id="username" placeholder="Enter Your Name">
+          <!-- Enter Location  -->
+          <p>Location</p>
+              <input class="form-control" id="location" placeholder="City and State">
+          <!-- Add Restaurant field -->
+          <div id="rest-list">
+            <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
+            <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
+            <br>
+            <!-- On Add, post request + update the above display-group div -->
+            <button id="submit-pick" type="button" class="btn btn-link">Add</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Show All Groups Form -->
+      <div id="all-groups" class="row">
+        <div class="col-xs-4 col-sm-offset-2 text-center">
+          <div id="allGroups">
+            <div id="allGroupsHead">All Groups</div>
+            <div id="allGroupsList"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer navbar-fixed-bottom">
+        <p> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
+        <div class="copyright">
+          <p> &copy; 2018 </p>
         </div>
       </div>
 
     </div>
+    <!-- End Container -->
 
-
-<!-- Footer -->
-    <div class="footer navbar-fixed-bottom">
-      <p> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
-      <div class="copyright">
-        <p> &copy; 2018 </p>
-      </div>
-    </div>
-
-</div> <!-- End Container -->
-
-<script type="text/javascript" src="/js/find-group.js"></script>   
-<script type="text/javascript" src="/js/create-group.js"></script>
-<script type="text/javascript" src="/js/lunch.js"></script>
+    <script type="text/javascript" src="/js/find-group.js"></script>
+    <script type="text/javascript" src="/js/create-group.js"></script>
+    <script type="text/javascript" src="/js/lunch.js"></script>
 </body>
 
 </html>

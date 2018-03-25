@@ -67,7 +67,7 @@ display: block;
 margin : 0 auto;
 }
 
-#new-group-form, #existing-group-form  {
+#new-group-form, #existing-group-form, #all-groups{
     display: none;
     background-color: rgba(19, 18, 18, 0.537);
     margin-top: 10rem;
@@ -189,3 +189,20 @@ margin : 0 auto;
       font-size: 15pt;
   }
 
+
+
+  #all-groups{
+    color: white;
+}
+  /* #allGroupsList{
+      color: white;
+
+  } */
+.allGroupsItemBtn{
+    transform: translate(-50%, -50%);
+    color: #BB7B43;
+    text-decoration: none;  
+    outline: none;
+    font-size: 2.1rem;
+    font-variant: small-caps;
+}

@@ -14,7 +14,8 @@ var express = require('express');
 module.exports = function (app) {
   // GET all groups
   app.get("/api/groups", function (req, res) {
-    db.findAll({attributes: ['group_name'], group: ['group_name']})
+    db.findAll({attributes: 
+      ['group_name'], group: ['group_name']})
       .then(function (data) {
         res.json(data);
         // console.log(data);
@@ -23,7 +24,7 @@ module.exports = function (app) {
 
   // GET all restaurants of a group
   app.get("/api/groups/:group", function (req, res) {
-    db.findAll({attributes: ['group_name', 'user_name'], where: {
+    db.findAll({ where: {
       group_name: req.params.group 
     }})
       .then(function (data) {
@@ -37,12 +38,28 @@ module.exports = function (app) {
     db.create(
       {
         group_name: req.body.group_name,
+        user_name: req.body.user_name,
         restaurant_name: req.body.restaurant_name
       }
-    )
-    db.sync();
+    ).then(function(data){
+      res.json(data);
+    })
   });
+
+  // POST a new group
+app.post("/api/newGroup", function (req, res) {
+  console.log(req.body);
+  db.create({
+    group_name: req.body.group_name,
+    user_name: req.body.user_name
+  }).then(function (data) {
+      res.json(data);
+    });
+});
+
+
 };
+
 // module.exports = function(app) {
 
 
