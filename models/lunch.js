@@ -18,10 +18,30 @@ var Lunch = sequelize.define("lunch", {
     type: Sequelize.STRING,
     defaultValue: ''
   },
+  address: {
+    type: Sequelize.STRING,
+    defaultValue: ''
+  },
+  phone: {
+    type: Sequelize.STRING,
+    defaultValue: ''
+  },
+  rating: {
+    type: Sequelize.STRING,
+    defaultValue: ''
+  },
+  photo: {
+    type: Sequelize.STRING,
+    defaultValue: ''
+  },
+  website: {
+    type: Sequelize.STRING,
+    defaultValue: ''
+  }
 }, {
-  timestamps: false
-});
-console.log("lunch model", Lunch)
+    timestamps: false
+  });
+// console.log("lunch model", Lunch)
 
 // Syncs with DB
 Lunch.sync();

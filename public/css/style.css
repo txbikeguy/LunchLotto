@@ -101,6 +101,7 @@ margin : 0 auto;
     margin-top: 10rem;
     padding: 20px;
     line-height: 2;
+    color: white;
 }
 
     /* #display-group{
@@ -196,13 +197,19 @@ margin : 0 auto;
 }
   /* #allGroupsList{
       color: white;
+        } */
+#allGroupsHead{
+    font-size: 20px;
+}
 
-  } */
 .allGroupsItemBtn{
-    transform: translate(-50%, -50%);
     color: #BB7B43;
-    text-decoration: none;  
+    text-decoration: none;
     outline: none;
     font-size: 2.1rem;
     font-variant: small-caps;
+    margin: 10px;
+    height: 40px;
+    display: inline-block;
+
 }

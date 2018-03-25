@@ -7,14 +7,15 @@ $("#submit-new-grp").on("click", function (event) {
         group_name: $("#new-group").val().trim(),
         user_name: $("#new-user").val().trim(),
     };
-
+    // check if group exists in database
+    $.get("/api/groups")
 
     // send an AJAX POST request with jQuery
     $.post("/api/newGroup", newGroup)
         //on success, run the following code
         .then(function (data) {
             //log the data we found
-            console.log("api data: ", data);
+            console.log("group data: ", data);
             var query = newGroup.group_name;
             searchGroup(query);
     // Clear form values
