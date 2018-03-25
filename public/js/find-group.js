@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    $("#find-group").click(function () {   
+    $("#find-group").click(function () { 
         var search = "/api/groups"
             var query = $('#existing-group').val().trim();
-            if (query.length > 0)
+            if (query.length != 0)
                 search += "/" + query;
             $.get(search).then(function (data) {
                 // console.log(JSON.stringify(data.length));
@@ -35,6 +35,7 @@ $(document).ready(function () {
                     $("#groupLabel").html("<i>Sorry, that group doesn't exist.</i><br>All Available Groups: <br>");
                     $("#groupName").text(groupSplit);
                     $("#user-list").hide();
+                    $("#mapContainer").show();
                 });
                 }
 
