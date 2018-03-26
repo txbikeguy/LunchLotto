@@ -49,31 +49,16 @@ $(document).ready(function () {
                     restaurants.push(data[i]);
                 }
                 var restaurant = restaurants[Math.floor(Math.random()*restaurants.length)];
-                $("#nameDiv").val(restaurant.restaurant_name); 
+                $("#nameDiv").html("<h4>" + restaurant.restaurant_name + "</h4>"); 
                 $("#addrDiv").text(restaurant.address);
                 $("#phoneDiv").text(restaurant.phone);
-                $("#ratingDiv").text(restaurant.rating);
+                $("#ratingDiv").text("Rating: " + restaurant.rating);
                 $("#photoDiv").empty();
-                $("#photoDiv").append('<img src="'+restaurant.photo +'" class="restaurant-photo"/>');
-                $("#websiteDiv").text(restaurant.website);
+                $("#photoDiv").append('<a href="' + restaurant.website + '" target=_blank><img id="restPhoto" src="'+ restaurant.photo + '" class="restaurant-photo"/></a>');
+                $("#restPhoto").attr(restaurant.website);
             } else {
                 $("#pick-result").text("No Restaurants have been added to this group.");
             }
         })
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
