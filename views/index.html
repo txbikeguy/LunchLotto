@@ -21,7 +21,6 @@
   <!-- Google API -->
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&callback=initMap&libraries=places">
   </script>  -->
-
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&libraries=places&language=en"></script>
 
   <!-- jQueryUI -->
@@ -64,8 +63,6 @@
     </div>
 
     <!-- Form: Create new group -->
-    <!--==========================================================================================-->
-
     <div id="new-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
         <!-- Group Name Input-->
@@ -85,8 +82,6 @@
         </button>
       </div>
     </div>
-    <!--==========================================================================================-->
-
 
     <!-- Form: Find group -->
     <div id="existing-group-form" class="row">
@@ -108,39 +103,36 @@
       </div>
     </div>
 
-
-
     <!-- Restaurant Form -->
     <div id="group-form" class="row">
       <div class="col-xs-4 col-sm-offset-2 text-center">
         <div id="display-group">
           <!-- Display Group and its current restaurants -->
           <div id="group-name">
-            <span id="groupLabel"></span>
             <span id="groupName"></span>
           </div>
 
           <div id="user-list">
-            Members of Group:
-            <br>
-            <span id="userNames"> (pulled from database if group exists)</span>
+            <p>Members:</p>
+            <span id="userNames"></span>
           </div>
-
+          <div id="pick-restaurant-form">
+            <button id="pick-restaurant" class="btn btn-lg">Pick Restaurant</button>
+          </div>
         </div>
       </div>
 
+      <!-- Add Restaurant Form -->
       <div class="col-xs-4 text-center">
         <div id="new-restaurant">
-          <!-- Add Restaurant to group -->
-          <p>Suggest a new restaurant:
-            <p>
+          <p id="rest-form-heading">Suggest a new restaurant:</p>
               <!-- Username -->
               <!-- Future: Set a group leader w/ admin abilities -->
-              <p>User Name</p>
-              <input class="form-control" id="username" placeholder="Enter Your Name">
+              <p class="rest-heading">User Name</p>
+                <input class="form-control" id="username" placeholder="Enter Your Name">
               <!-- Enter Location  -->
-              <p>Location</p>
-              <input class="form-control" id="location" placeholder="City and State">
+              <p class="rest-heading">Location</p>
+                <input class="form-control" id="location" placeholder="City and State">
               <!-- Add Restaurant field -->
               <div id="rest-list">
                 <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
@@ -173,8 +165,6 @@
       </div>
     </div>
 
-
-
     <!-- Footer -->
     <div class="footer navbar-fixed-bottom">
       <p> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
@@ -191,6 +181,7 @@
   <script type="text/javascript" src="/js/create-group.js"></script>
   <script type="text/javascript" src="/js/lunch.js"></script>
   <script type="text/javascript" src="/js/map.js"></script>
+  <script type="text/javascript" src="/js/add-restaurant.js"></script>
 </body>
 
 </html>

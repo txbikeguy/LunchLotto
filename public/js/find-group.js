@@ -38,8 +38,7 @@ function searchGroup(query) {
                 userList.push(data[i].user_name);
             }
             var splitUser = userList.join(", ");
-            $("#userNames").text("");
-            $("#groupLabel").text("Group: ");
+            
             $("#userNames").text(splitUser);
             $("#user-list").show();
             $("#group-form").slideToggle();

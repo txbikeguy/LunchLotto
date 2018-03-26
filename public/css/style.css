@@ -75,12 +75,17 @@ margin : 0 auto;
     line-height: 1;
 }
 
-.form-heading, .rest-heading {
+.form-heading, .rest-heading, #user-list {
     color:#e0d8cb;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-variant: small-caps;
 }
 
+#rest-form-heading, #group-name, #allGroupsHead {
+    color:#e0d8cb;
+    font-size: 3.5rem;
+    font-variant: small-caps;
+}
 
 
 #submit-new-grp, #find-group, #submit-pick {
@@ -104,17 +109,17 @@ margin : 0 auto;
     color: white;
 }
 
-    /* #display-group{
-        background-color: rgba(105, 28, 28, 0.34);
-        border: 3px solid black;
-        padding: 20px;
-    } */
-/* #new-restaurant{
-    background-color: rgba(105, 28, 28, 0.34);
-    border: 3px solid black;
+#display-group{
+    background-color: rgba(18, 14, 149, 0.217);
+    border: 1px solid black;
     padding: 20px;
-    
-} */
+} 
+
+ #new-restaurant{
+    background-color: rgba(18, 14, 149, 0.217);
+    border: 1px solid black;
+    padding: 20px;
+} 
 
 ::placeholder { 
     font-style: italic;
@@ -185,10 +190,7 @@ margin : 0 auto;
     }
   }
 
-  #user-list, #group-name, #rest-name {
-      color: #e0d8cb;
-      font-size: 15pt;
-  }
+
 
 
 
@@ -211,5 +213,4 @@ margin : 0 auto;
     margin: 10px;
     height: 40px;
     display: inline-block;
-
 }
