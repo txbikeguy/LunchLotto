@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< Updated upstream
     "password": null,
+=======
+    "password": "mySQL",
+>>>>>>> Stashed changes
     "database": "lunch_db",
     "host": "localhost",
     "dialect": "mysql"
@@ -14,10 +18,6 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+      "use_env_variable": "DATABASE_URL"
   }
 }
