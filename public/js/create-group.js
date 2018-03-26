@@ -1,14 +1,12 @@
-// When user hits the submit-new-grp button
+// POST a new group
 $("#submit-new-grp").on("click", function (event) {
-
-
     // Created a newGroup constructor which holds the values submitted from the forms. 
     var newGroup = {
         group_name: $("#new-group").val().trim(),
         user_name: $("#new-user").val().trim(),
     };
-    // check if group exists in database
-    $.get("/api/groups")
+    // Later: check if group exists in database
+    //$.get("/api/groups")
 
     // send an AJAX POST request with jQuery
     $.post("/api/newGroup", newGroup)

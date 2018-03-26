@@ -98,6 +98,10 @@ margin : 0 auto;
     font-variant: small-caps;
 }
 
+/* #submit-pick {
+    margin-top: 20px;
+} */
+
 
 
 #group-form{
@@ -213,4 +217,16 @@ margin : 0 auto;
     margin: 10px;
     height: 40px;
     display: inline-block;
+}
+
+#pick-form {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+}
+
+.restaurant-photo {
+    height: 200px;
+    width: auto;
+    border: 1px solid black;
 }
