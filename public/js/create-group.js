@@ -1,5 +1,6 @@
 // POST a new group
 $("#submit-new-grp").on("click", function (event) {
+    console.log("submit new is working")
     // Created a newGroup constructor which holds the values submitted from the forms. 
     var newGroup = {
         group_name: $("#new-group").val().trim(),
