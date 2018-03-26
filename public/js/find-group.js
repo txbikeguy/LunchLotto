@@ -14,7 +14,7 @@ function searchGroup(query) {
     if (query.length > 0)
         search += "/" + query;
     $.get(search).then(function (data) {
-        console.log(data);
+        // console.log(data);
         //Later: add error div for no results found.
         if (data.length == 0)
             return;
@@ -24,7 +24,7 @@ function searchGroup(query) {
         $("#group-form").slideUp(0);
         if (query.length > 0) {
             // put group name into #groupName span 
-            $("#groupName").html("<p>" + query + "</p>");
+            $("#groupName").html("<p id='groupP'>" + query + "</p>");
             // parse username data into #userNames span
             userList = [];
             for (i = 0; i < data.length; i++) {
