@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "mySQL",
     "database": "lunch_db",
     "host": "localhost",
     "dialect": "mysql"
@@ -14,6 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-      "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "DATABASE_URL",
+    "username": "zbxwbhzqyjoyoi",
+    "password": null,
+    "database": "d56t4o78pe6par",
+    "host": "ec2-54-221-239-109.compute-1.amazonaws.com",
+    "dialect": "postgres"
   }
 }
