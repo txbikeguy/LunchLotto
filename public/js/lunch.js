@@ -12,6 +12,8 @@ $(document).ready(function () {
         $("#new-group-form").slideToggle();
         // Hide Find Group form if open
         $("#existing-group-form").slideUp(0);
+       //hide intro box if open
+       $(".introduction").slideUp(0);
         // Hide Restaurant form if open
         $("#group-form").slideUp(0);
         // Hide Restaurant card if open
@@ -25,6 +27,8 @@ $(document).ready(function () {
         $("#existing-group-form").slideToggle();
         // Hide New Group form if open
         $("#new-group-form").slideUp(0);
+         //hide intro box if open
+         $(".introduction").slideUp(0);
         // Hide Restaurant form if open
         $("#group-form").slideUp(0);
         // Empty group form values if any
