@@ -1,8 +1,3 @@
-theirs:
-
-
-
-
 $(document).ready(function () {
     $("#find-group").click(function () {   
         var search = "/api/groups"
@@ -12,7 +7,7 @@ $(document).ready(function () {
             $.get(search).then(function (data) {
                 // console.log(JSON.stringify(data.length));
 
-                // if a group name was entered, list all restaurants for the group
+                // if a group name was entered, list all users for the group
                 if (data.length > 0) {
                     // put group name into #groupName span 
                     $("#groupName").html("<p>" + query + "</p>");

@@ -30,13 +30,15 @@ function searchGroup(query) {
             for (i = 0; i < data.length; i++) {
                 userList.push(data[i].user_name);
             }
-            var splitUser = userList.join(", ");
+            var splitUser = userList.join(" ");
             $("#userNames").text(splitUser);
             $("#user-list").show();
             $("#group-form").slideToggle();
+            $("#existing-group").val("");
         // ELSE if no group name was entered, find all groups
         } else {
             $("#all-groups").slideToggle();
+            $("#existing-group").val("");
             //// Make a div for each group and add to #all-groups form under #allGroupsList div
             for (i = 0; i < data.length; i++) {
                 var div = $("<div class='allGroupsItem'>");
@@ -51,7 +53,6 @@ function searchGroup(query) {
                     var query = this.innerHTML;
                     searchGroup(query);
                 })
-                //$("#groupLabel").html("<i>Sorry, that group doesn't exist.</i><br>All Available Groups: <br>");
                 $("#mapContainer").show();
             }
         }

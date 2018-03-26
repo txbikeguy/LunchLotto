@@ -12,12 +12,12 @@ if (process.env.HEROKU_POSTGRESQL_PUCE_URL) {
     dialect:  'postgres',
     protocol: 'postgres',
     port:     5432,
-    host:     "ec2-54-221-239-109.compute-1.amazonaws.com",
+    host:     "ec2-107-20-151-189.compute-1.amazonaws.com",
     logging:  true //false
   })
 } else {
 
-  sequelize = new Sequelize("lunch_db", "root", null, {
+  sequelize = new Sequelize("lunch_db", "root", "mySQL", {
     host: "localhost",
     dialect: "mysql",
     pool: {

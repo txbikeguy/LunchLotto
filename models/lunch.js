@@ -12,7 +12,8 @@ var Lunch = sequelize.define("lunch", {
     type: Sequelize.STRING
   },
   user_name: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
+    defaultValue: ''
   },
   restaurant_name: {
     type: Sequelize.STRING,

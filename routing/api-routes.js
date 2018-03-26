@@ -40,8 +40,8 @@ module.exports = function (app) {
   app.post("/api/newGroup", function (req, res) {
     console.log(req.body);
     db.create({
-      group_name: req.body.group_name,
-      user_name: req.body.user_name
+      group_name: req.body.group_name
+      // user_name: req.body.user_name
     }).then(function (data) {
       res.json(data);
     });
