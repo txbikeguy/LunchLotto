@@ -40,6 +40,7 @@ $(document).ready(function () {
 
     // pick random restaurant
     $("#pick-restaurant").click(function() {
+        console.log("random is working");
         var group = $("#groupName").text().trim();
         $.get("/api/pickRestaurant/" + group).then(function (data) {
             if (data.length > 0) {
