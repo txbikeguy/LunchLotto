@@ -17,15 +17,15 @@ if (process.env.HEROKU_POSTGRESQL_PUCE_URL) {
   })
 } else {
 
-var sequelize = new Sequelize("lunch_db", "root", null, {
-  host: "localhost",
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  }
-});
+  sequelize = new Sequelize("lunch_db", "root", null, {
+    host: "localhost",
+    dialect: "mysql",
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    }
+  });
 };
 
 // Exports the connection for other files to use
