@@ -17,7 +17,7 @@ if (process.env.HEROKU_POSTGRESQL_PUCE_URL) {
   })
 } else {
 
-  sequelize = new Sequelize("lunch_db", "root", "Jonsnow123", {
+  sequelize = new Sequelize("lunch_db", "root", "mySQL", {
     host: "localhost",
     dialect: "mysql",
     pool: {
