@@ -34,11 +34,9 @@ function searchGroup(query) {
             $("#userNames").text(splitUser);
             $("#user-list").show();
             $("#group-form").slideToggle();
-            $("#existing-group").val("");
         // ELSE if no group name was entered, find all groups
         } else {
             $("#all-groups").slideToggle();
-            $("#existing-group").val("");
             //// Make a div for each group and add to #all-groups form under #allGroupsList div
             for (i = 0; i < data.length; i++) {
                 var div = $("<div class='allGroupsItem'>");
