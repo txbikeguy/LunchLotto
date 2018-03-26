@@ -17,7 +17,6 @@ if (process.env.HEROKU_POSTGRESQL_PUCE_URL) {
   })
 } else {
 
-<<<<<<< Updated upstream
 var sequelize = new Sequelize("lunch_db", "root", null, {
   host: "localhost",
   dialect: "mysql",
@@ -26,16 +25,6 @@ var sequelize = new Sequelize("lunch_db", "root", null, {
     min: 0,
     idle: 10000
   }
-=======
-  sequelize = new Sequelize("lunch_db", "root", "mySQL", {
-    host: "localhost",
-    dialect: "mysql",
-    pool: {
-      max: 5,
-      min: 0,
-      idle: 10000
-    }
->>>>>>> Stashed changes
 });
 };
 

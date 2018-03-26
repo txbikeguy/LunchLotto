@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< Updated upstream
     "password": null,
-=======
-    "password": "mySQL",
->>>>>>> Stashed changes
     "database": "lunch_db",
     "host": "localhost",
     "dialect": "mysql"
