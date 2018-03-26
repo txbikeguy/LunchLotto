@@ -36,12 +36,10 @@ function yelpSearchSettings(restaurant) {
 $("#submit-pick").click(function () {
     event.preventDefault();
     searchYelp();
-    // setTimeout(function(){ console.log("timeout works"); $("#username").val(""); $("#location").val(""); $("#restaurant-name").val(""); }, 500);
 });
 
 // YELP SEARCH - calls Yelp API when a user enters a location and restaurant
 function searchYelp() {
-    console.log("yelping");
     //Grab user input
     var restaurant = $("#restaurant-name").val().trim();
     //Empty all form values
@@ -58,7 +56,6 @@ function searchYelp() {
 
 // Parse Yelp API Data
 function parseYelp(data) {
-    console.log("parsing");
     var name = data.name;
     var address = data.location.display_address[0];
     var phone = data.display_phone;
@@ -72,7 +69,6 @@ function parseYelp(data) {
 
 //Function to parse Yelp API restaurant json to database
 function restaurantDB(name, address, phone, rating, photo, website) {
-    console.log("restauranting");
     var restaurant = {
         user_name: $("#username").val().trim(),
         group_name: $("#groupName").text().trim(),
