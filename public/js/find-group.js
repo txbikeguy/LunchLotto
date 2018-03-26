@@ -30,7 +30,7 @@ function searchGroup(query) {
             for (i = 0; i < data.length; i++) {
                 userList.push(data[i].user_name);
             }
-            var splitUser = userList.join(", ");
+            var splitUser = userList.join(" ");
             $("#userNames").text(splitUser);
             $("#user-list").show();
             $("#group-form").slideToggle();
@@ -51,7 +51,6 @@ function searchGroup(query) {
                     var query = this.innerHTML;
                     searchGroup(query);
                 })
-                //$("#groupLabel").html("<i>Sorry, that group doesn't exist.</i><br>All Available Groups: <br>");
                 $("#mapContainer").show();
             }
         }
