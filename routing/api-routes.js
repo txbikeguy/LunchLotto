@@ -65,9 +65,21 @@ module.exports = function (app) {
       });
   });
 
-  // POST
-
+  // GET a random restaurant
+  app.get("/api/pickRestaurant/:group", function(req, res){
+    db.findAll({
+      where: {
+        group_name: req.params.group,
+        restaurant_name:{
+          $ne: null
+        }
+      },
+      attributes:
+      ['restaurant_name', 'address', 'phone', 'rating', 'photo', 'website']
+  }).then(function (data) {
+    res.json(data);
+  })
+});
 
 };
-
 

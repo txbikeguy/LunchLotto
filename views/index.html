@@ -103,7 +103,9 @@
       </div>
     </div>
 
-    <!-- Restaurant Form -->
+<!-- Group form: View Group & Add Restaurants -->
+
+    <!-- Group Info Form -->
     <div id="group-form" class="row">
       <div class="col-xs-4 col-sm-offset-2 text-center">
         <div id="display-group">
@@ -116,31 +118,46 @@
             <p>Members:</p>
             <span id="userNames"></span>
           </div>
-          <div id="pick-restaurant-form">
-            <button id="pick-restaurant" class="btn btn-lg">Pick Restaurant</button>
-          </div>
+
+        </div>
+
+
+        <!-- Restaurant card: Div to display yelp info of picked restaurant -->
+        <div id="pick-form">
+              <div id="restaurantCard">
+                <button id="pick-restaurant" class="btn btn-lg">Pick Restaurant</button>
+                <div id="pick-result"></div>
+                <div id="nameDiv"></div>
+                <div id="addrDiv"></div>
+                <div id="phoneDiv"></div>
+                <div id="ratingDiv"></div>
+                <div id="photoDiv"></div>
+                <div id="websiteDiv"></div>
+              </div>
+
         </div>
       </div>
+        
 
       <!-- Add Restaurant Form -->
       <div class="col-xs-4 text-center">
         <div id="new-restaurant">
           <p id="rest-form-heading">Suggest a new restaurant:</p>
-              <!-- Username -->
-              <!-- Future: Set a group leader w/ admin abilities -->
-              <p class="rest-heading">User Name</p>
-                <input class="form-control" id="username" placeholder="Enter Your Name">
-              <!-- Enter Location  -->
-              <p class="rest-heading">Location</p>
-                <input class="form-control" id="location" placeholder="City and State">
-              <!-- Add Restaurant field -->
-              <div id="rest-list">
-                <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
-                <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
-                <br>
-                <!-- On Add, post request + update the above display-group div -->
-                <button id="submit-pick" type="button" class="btn btn-link">Add</button>
-              </div>
+          <!-- Username -->
+          <!-- Future: Set a group leader w/ admin abilities -->
+          <p class="rest-heading">User Name</p>
+          <input class="form-control" id="username" placeholder="Enter Your Name">
+          <!-- Enter Location  -->
+          <p class="rest-heading">Location</p>
+          <input class="form-control" id="location" placeholder="City and State">
+          <!-- Add Restaurant field -->
+          <div id="rest-list">
+            <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
+            <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
+            <button id="submit-pick" type="button" class="btn btn-link">Add</button>
+            
+            <br>
+          </div>
         </div>
       </div>
     </div>

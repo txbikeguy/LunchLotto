@@ -35,6 +35,31 @@ $(document).ready(function () {
         // Hide all groups form if open
         $("#all-groups").slideUp(0);
     });
+
+
+
+    // pick random restaurant
+    $("#pick-restaurant").click(function() {
+        var group = $("#groupName").text().trim();
+        $.get("/api/pickRestaurant/" + group).then(function (data) {
+            if (data.length > 0) {
+                restaurants = [];
+                for (i=0; i<data.length; i++) {
+                    restaurants.push(data[i]);
+                }
+                var restaurant = restaurants[Math.floor(Math.random()*restaurants.length)];
+                $("#nameDiv").val(restaurant.restaurant_name); 
+                $("#addrDiv").text(restaurant.address);
+                $("#phoneDiv").text(restaurant.phone);
+                $("#ratingDiv").text(restaurant.rating);
+                $("#photoDiv").empty();
+                $("#photoDiv").append('<img src="'+restaurant.photo +'" class="restaurant-photo"/>');
+                $("#websiteDiv").text(restaurant.website);
+            } else {
+                $("#pick-result").text("No Restaurants have been added to this group.");
+            }
+        })
+    });
 });
 
 
