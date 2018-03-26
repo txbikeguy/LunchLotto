@@ -18,6 +18,10 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+  <!-- Loading Screen Button CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/loading-btn.css">
+  <link rel="stylesheet" type="text/css" href="/css/loading.css">
+  
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
@@ -180,6 +184,7 @@
             <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
             <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
             <br>
+            <!-- Maybe add these to class later if we can get Loading CSS to work 'ld ld-over-full-inverse running' -->
             <button id="submit-pick" type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">Add</button>
 
             <br>
@@ -213,9 +218,9 @@
 
     <!-- Footer -->
     <div class="footer navbar-fixed-bottom">
-      <p> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
+      <p id="foot-text"> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
       <div class="copyright">
-        <p> &copy; 2018 </p>
+        <p id="copywrite"> &copy; 2018 </p>
       </div>
     </div>
 

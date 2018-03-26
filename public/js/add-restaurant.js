@@ -84,5 +84,10 @@ function restaurantDB(name, address, phone, rating, photo, website) {
 
         .then(function (data) {
             console.log("yelp api data saved to db: ", data);
+            $("#username").val(""); 
+            $("#location").val(""); 
+            $("#restaurant-name").val("");
+            // Saving for later use with Loading Button CSS
+            // $("#submit-pick").removeClass("ld ld-over-full-inverse running");
         })
 };
