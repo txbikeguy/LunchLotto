@@ -18,9 +18,10 @@
   <!-- Favicon Image -->
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
-  <!-- Google API --> 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&callback=initMap&libraries=places">
-  </script> 
+  <!-- Google API -->
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&callback=initMap&libraries=places">
+  </script>  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCjIgTt1g9A5RbibI7lN8vsHSlbsnj0rI&libraries=places&language=en"></script>
 
   <!-- jQueryUI -->
   <link rel="stylesheet" type="text/css" media="all" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css"
@@ -62,8 +63,6 @@
     </div>
 
     <!-- Form: Create new group -->
-    <!--==========================================================================================-->
-
     <div id="new-group-form" class="row">
       <div class="col-xs-4 col-sm-offset-4 text-center">
         <!-- Group Name Input-->
@@ -83,8 +82,6 @@
         </button>
       </div>
     </div>
-    <!--==========================================================================================-->
-
 
     <!-- Form: Find group -->
     <div id="existing-group-form" class="row">
@@ -106,87 +103,85 @@
       </div>
     </div>
 
-
-
     <!-- Restaurant Form -->
     <div id="group-form" class="row">
       <div class="col-xs-4 col-sm-offset-2 text-center">
         <div id="display-group">
           <!-- Display Group and its current restaurants -->
           <div id="group-name">
-            <span id="groupLabel"></span>
             <span id="groupName"></span>
           </div>
 
           <div id="user-list">
-            Members of Group:
-            <br>
-            <span id="userNames"> (pulled from database if group exists)</span>
+            <p>Members:</p>
+            <span id="userNames"></span>
           </div>
-
+          <div id="pick-restaurant-form">
+            <button id="pick-restaurant" class="btn btn-lg">Pick Restaurant</button>
+          </div>
         </div>
       </div>
 
+      <!-- Add Restaurant Form -->
       <div class="col-xs-4 text-center">
         <div id="new-restaurant">
-          <!-- Add Restaurant to group -->
-          <p>Suggest a new restaurant:<p>
-          <!-- Username -->
-          <!-- Future: Set a group leader w/ admin abilities -->
-          <p>User Name</p>
-              <input class="form-control" id="username" placeholder="Enter Your Name">
-          <!-- Enter Location  -->
-          <p>Location</p>
-              <input class="form-control" id="location" placeholder="City and State">
-          <!-- Add Restaurant field -->
-          <div id="rest-list">
-            <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
-            <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
-            <br>
-            <!-- On Add, post request + update the above display-group div -->
-            <button id="submit-pick" type="button" class="btn btn-link">Add</button>
-          </div>
+          <p id="rest-form-heading">Suggest a new restaurant:</p>
+              <!-- Username -->
+              <!-- Future: Set a group leader w/ admin abilities -->
+              <p class="rest-heading">User Name</p>
+                <input class="form-control" id="username" placeholder="Enter Your Name">
+              <!-- Enter Location  -->
+              <p class="rest-heading">Location</p>
+                <input class="form-control" id="location" placeholder="City and State">
+              <!-- Add Restaurant field -->
+              <div id="rest-list">
+                <p id="rest-name" class="rest-heading">Restaurant Suggestion</p>
+                <input class="form-control" id="restaurant-name" placeholder="Enter a Restaurant Suggestion">
+                <br>
+                <!-- On Add, post request + update the above display-group div -->
+                <button id="submit-pick" type="button" class="btn btn-link">Add</button>
+              </div>
         </div>
       </div>
-      </div>
+    </div>
 
-      <!-- Show All Groups Form -->
-      <div id="all-groups" class="row">
-        <div class="col-xs-4 col-sm-offset-2 text-center">
-          <div id="allGroups">
-            <div id="allGroupsHead">All Groups</div>
-            <div id="allGroupsList"></div>
-          </div>
+    <!-- All Groups Form -->
+    <div id="all-groups" class="row">
+      <div class="col-xs-4 col-sm-offset-4 text-center">
+        <!-- col-sm-offset-4 -->
+        <div id="allGroups">
+          <div id="allGroupsHead">All Groups</div>
+          <div id="allGroupsList"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Map -->
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-7 center-align">
-          <div  id="mapContainer" class="">
-            <div id="map"></div>
-          </div>
-        </div>
-    </div>
-
+      <div class="col-sm-12 col-md-12 col-lg-7 center-align">
+        <div id="mapContainer" class="">
+          <div id="map"></div>
         </div>
       </div>
-
-      <!-- Footer -->
-      <div class="footer navbar-fixed-bottom">
-        <p> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
-        <div class="copyright">
-          <p> &copy; 2018 </p>
-        </div>
-      </div>
-
     </div>
-    <!-- End Container -->
 
-<!-- Linking all our JavaScript Files -->
-<script type="text/javascript" src="/js/find-group.js"></script>   
-<script type="text/javascript" src="/js/create-group.js"></script>
-<script type="text/javascript" src="/js/lunch.js"></script>
-<script type="text/javascript" src="/js/map.js"></script>
+    <!-- Footer -->
+    <div class="footer navbar-fixed-bottom">
+      <p> CONTRIBUTORS: Alycia Riley, Rob Castellano, Ben Cross, Jennifer Kral</p>
+      <div class="copyright">
+        <p> &copy; 2018 </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- End Container -->
+
+  <!-- Linking all our JavaScript Files -->
+  <script type="text/javascript" src="/js/find-group.js"></script>
+  <script type="text/javascript" src="/js/create-group.js"></script>
+  <script type="text/javascript" src="/js/lunch.js"></script>
+  <script type="text/javascript" src="/js/map.js"></script>
+  <script type="text/javascript" src="/js/add-restaurant.js"></script>
 </body>
 
 </html>
