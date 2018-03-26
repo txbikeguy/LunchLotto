@@ -72,12 +72,17 @@ input {
   line-height: 1;
 }
 
-.form-heading,
-.rest-heading,
-#user-list {
+.form-heading {
   color: #e0d8cb;
   font-size: 2.5rem;
   font-variant: small-caps;
+}
+
+.rest-heading {
+    color: #e0d8cb;
+    font-size: 1.8rem;  
+    line-height: 1.5rem;
+    text-align: left;
 }
 
 #user-list{
@@ -101,12 +106,16 @@ input {
       
   }
 
-
-#rest-form-heading,
 #allGroupsHead {
   color: #e0d8cb;
   font-size: 3.5rem;
+  line-height: 2rem;
   font-variant: small-caps;
+}
+
+#rest-form-heading {
+    color: #e0d8cb; 
+    font-size: 2.5rem;
 }
 
 #submit-new-grp,
@@ -121,10 +130,6 @@ input {
   font-size: 2.1rem;
   font-variant: small-caps;
 }
-
-/* #submit-pick {
-    margin-top: 20px;
-} */
 
 #group-form {
   display: none;
@@ -164,6 +169,31 @@ input {
   font-variant: small-caps;
   /* width: 11vw; */
 }
+
+#all-groups {
+    color: white;
+  }
+  
+  #allGroupsHead {
+    font-size: 20px;
+  }
+  
+  .allGroupsItemBtn {
+    color: #bb7b43;
+    text-decoration: none;
+    outline: none;
+    font-size: 2.1rem;
+    font-variant: small-caps;
+    margin: 10px;
+    height: 40px;
+    display: inline-block;
+  }
+  
+  .restaurant-photo {
+    height: 200px;
+    width: auto;
+    border: 1px solid black;
+  }
 
 .footer {
   background-color: rgba(19, 18, 18, 0.537);
@@ -206,37 +236,3 @@ input {
   }
 }
 
-#all-groups {
-  color: white;
-}
-/* #allGroupsList{
-      color: white;
-        } */
-#allGroupsHead {
-  font-size: 20px;
-}
-
-.allGroupsItemBtn {
-  color: #bb7b43;
-  text-decoration: none;
-  outline: none;
-  font-size: 2.1rem;
-  font-variant: small-caps;
-  margin: 10px;
-  height: 40px;
-  display: inline-block;
-}
-
-
-/* #pick-form {
-  background-color:#787825;
-  opacity: 0.5;
-  height: 200px;
-  width: 200px;
-} */
-
-.restaurant-photo {
-  height: 200px;
-  width: auto;
-  border: 1px solid black;
-}
