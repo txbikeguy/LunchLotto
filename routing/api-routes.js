@@ -1,15 +1,9 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
 // Requiring our models
 var models = require('../models');
 var db = require("../models/lunch.js");
 var express = require('express');
+
 // Routes
-// =============================================================
 module.exports = function (app) {
   // GET all groups
   app.get("/api/groups", function (req, res) {

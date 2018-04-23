@@ -1,11 +1,7 @@
-// *********************************************************************************
-// CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
-// *********************************************************************************
-
 // Dependencies
 var Sequelize = require("sequelize");
 
-// Creates mySQL connection using Sequelize
+// Creates POSTGRES connection
 if (process.env.HEROKU_POSTGRESQL_PUCE_URL) {
   // the application is executed on Heroku ... use the postgres database
   sequelize = new Sequelize(process.env.HEROKU_POSTGRESQL_PUCE_URL, {
