@@ -1,5 +1,4 @@
 // Requiring our models
-var models = require('../models');
 var db = require("../models/lunch.js");
 var express = require('express');
 
